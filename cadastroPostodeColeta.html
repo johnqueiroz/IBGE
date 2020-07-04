@@ -1,0 +1,187 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+             <title>Sistemas de arquivo IBGE</title>
+             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+             <link rel="stylesheet" href="estilo.css" type="text/css">
+
+
+
+
+    </head>
+
+<body>
+        <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+                    
+
+                    <a class="navbar-brand" href="cadastroPostodeColeta.html" style="color: aliceblue;" >Sistemas de arquivo IBGE</a>
+
+                    <div class= "collapse navbar-collapse" id="navbarSite">
+                      <ul class="navbar-nav ml-auto">
+              
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="controleEqp.html" style="color: aliceblue;">Equipamentos</a>
+                          </li>
+                          <div class="dropdown">
+                                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Contatos
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <button class="dropdown-item" type="button">(83)9 998341257</button>
+                                        <button class="dropdown-item" type="button">(83)9 996112880</button>
+                                        <button class="dropdown-item" type="button" href="#">Central de atendimento </button>
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Cadastros
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                    <a href="cadastroareas.html">  <button class="dropdown-item" type="button">Cadastro Áreas</button></a>
+                                    <a href="cadastroSubarea.html">    <button class="dropdown-item" type="button" >Cadastro Subareas</button></a>
+                                    <a href="cadastroPostodeColeta.html">    <button class="dropdown-item" type="button">Cadastro Posto de Coleta</button></a>
+                                    </div>
+                                    </div>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="index.html" style="color: aliceblue;">Sair</a>
+                                </li>
+                      </ul>
+
+                  </div>
+
+                 
+
+
+              </nav>
+              
+                <div>
+                        <img src="IBGE.png" alt="IBGE" height="50%" width="100%">
+
+                </div>
+
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-acm-tab" data-toggle="tab" href="#nav-acm" role="tab"
+                      aria-controls="nav-acm" aria-selected="true">ACM </a>
+
+                  <a class="nav-item nav-link" id="nav-acs-tab" data-toggle="tab" href="#nav-acs" role="tab"
+                    aria-controls="nav-acs" aria-selected="false">ACS</a>
+              
+              
+                    <a class="nav-item nav-link" id="nav-posto-tab" data-toggle="tab" href="#nav-posto" role="tab"
+                      aria-controls="nav-posto" aria-selected="false">Posto de Coleta</a>
+            
+                  </div>
+              
+                </nav>
+      
+               
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-acm" role="tabpanel" aria-labelledby="nav-acm-tab">
+                    <div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputNomeacm">Nome</label>
+                          <input type="text" class="form-control" id="inputNomeacm" placeholder="Ex: John Emerson Ferreira R Filho">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputEmailacm">E-mail</label>
+                          <input type="text" class="form-control" id="inputEmailacm" placeholder="Email@ibge.gov.br">
+                        </div>
+    
+                      </div>
+                    
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputTelefoneacm">Telefone privado/VOIP</label>
+                          <input type="number" class="form-control" id="inputTelefoneacm"
+                            placeholder="83998341257">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPostoacm">Posto do ACM</label>
+                          <input type="text" class="form-control" id="inputPostoacm"
+                            placeholder="Posto de coleta">
+                        </div>
+                      </div>
+                    
+                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                    </div>
+                  </div>
+                 </div>
+        
+                 <div class="tab-pane fade show active" id="nav-acs" role="tabpanel" aria-labelledby="nav-acs-tab">
+                  <div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputNomeacs">Nome</label>
+                        <input type="text" class="form-control" id="inputNomeacs" placeholder="Ex: John Emerson Ferreira R Filho">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputEmailacs">E-mail</label>
+                        <input type="text" class="form-control" id="inputEmailacs" placeholder="Email@ibge.gov.br">
+                      </div>
+
+                    </div>
+                   
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputTelefoneacs">Telefone privado/VOIP</label>
+                        <input type="number" class="form-control" id="inputTelefoneacs"
+                          placeholder="83998341257">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPostoacs">Posto do ACS</label>
+                        <input type="text" class="form-control" id="inputPostoacs"
+                          placeholder="Posto de coleta">
+                      </div>
+                    </div>
+                  
+                    <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+               
+                </div>
+               </div>
+        
+               
+                  <div class="tab-pane fade" id="nav-posto" role="tabpanel" aria-labelledby="nav-posto-tab">
+
+                    <div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputNomePosto">Nome da Posto</label>
+                          <input type="text" class="form-control" id="inputNomePosto" placeholder="Posto de Coleta">
+                        </div>
+                      
+                        <div class="form-group col-md-6">
+                          <label for="inputEnderecoPosto">Endereço do Posto de Coleta</label>
+                          <input type="text" class="form-control" id="inputEnderecoPosto" placeholder="Rua ...">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputTelefonePosto">Telefone do Posto de Coleta</label>
+                        <input type="number" class="form-control" id="inputTelefonePosto" placeholder="32219586">
+                      </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputSubareaPertence">Subarea pertencente</label>
+                        <input type="text" class="form-control" id="inputSubareaPertence" placeholder="João Pessoa">
+                    </div>
+                    </div>
+                    </div>
+                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                    </div>
+                  </div>
+              
+      
+              
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
