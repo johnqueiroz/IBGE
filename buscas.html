@@ -7,25 +7,25 @@
 
              <link rel="stylesheet" href="estilo.css" type="text/css">
 
-             <link rel="icon" type="imagem/png" href="ms-icon-144x144.png" />
 
+             <link rel="icon" type="imagem/png" href="ms-icon-144x144.png" />
 
     </head>
 
 <body>
- 
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
                     
 
-            <a class="navbar-brand" href="cadastroareas.html" style="color: aliceblue;" >Sistemas de arquivo IBGE</a>
+            <a class="navbar-brand" href="buscas.html" style="color: aliceblue;" >Sistemas de arquivo IBGE</a>
 
             <div class= "collapse navbar-collapse" id="navbarSite">
               <ul class="navbar-nav ml-auto">
       
 
                   
+                   
                 <li class="nav-item">
                   <a class="nav-link" href="buscas.html" style="color: aliceblue;">Buscas</a>
               </li>
@@ -64,60 +64,40 @@
        
 
       </nav>
-                    <br>
-
-                   
-              
-                <div id="cadastro">
-
-                        Cadastro Áreas
+      <br>
+                <div id="busca">
+                        Buscas de áreas, subareas, postos de coletas e equipamentos.
 
                 </div>
-<br>
+<br> <br>
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-coord-tab" data-toggle="tab" href="#nav-coord" role="tab"
-                      aria-controls="nav-coord" aria-selected="true">Coordenador da Área </a>
+                    <a class="nav-item nav-link active" id="nav-buscaArea-tab" data-toggle="tab" href="#nav-buscaArea" role="tab"
+                      aria-controls="nav-buscaArea" aria-selected="true">Áreas </a>
               
-                    <a class="nav-item nav-link" id="nav-area-tab" data-toggle="tab" href="#nav-area" role="tab"
-                      aria-controls="nav-area" aria-selected="false">Área</a>
+                    <a class="nav-item nav-link" id="nav-buscaSub-tab" data-toggle="tab" href="#nav-buscaSub" role="tab"
+                      aria-controls="nav-buscaSub" aria-selected="false">Subareas</a>
               
+                      <a class="nav-item nav-link" id="nav-buscaPosto-tab" data-toggle="tab" href="#nav-buscaPosto" role="tab"
+                      aria-controls="nav-buscaPosto" aria-selected="false">Posto de Coleta</a>
+
+                      <a class="nav-item nav-link" id="nav-buscaEquipamentos-tab" data-toggle="tab" href="#nav-buscaEquipamentos" role="tab"
+                      aria-controls="nav-buscaEquipamentos" aria-selected="false">Equipamentos</a>
                   </div>
               
                 </nav>
          
                
                 <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-coord" role="tabpanel" aria-labelledby="nav-coord-tab">
+                  <div class="tab-pane fade show active" id="nav-buscaArea" role="tabpanel" aria-labelledby="nav-buscaArea-tab">
                     <div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputNomeCoordArea">Nome</label>
-                          <input type="text" class="form-control" id="inputNomeCoordArea" placeholder="Ex: John Emerson Ferreira R Filho">
+                      
+                        <div class="form-group">
+                          <label for="inputNomeBuscaArea">Nome da Área</label>
+                          <input type="text" class="form-control" id="inputNomeBuscaArea" placeholder="Ex: João Pessoa">
                         </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputSiapeCoord">Número do Siape</label>
-                          <input type="number" class="form-control" id="inputSiapeCoord" placeholder="3080572">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputEmailCoord">E-mail</label>
-                        <input type="text" class="form-control" id="inputEmailCoord" placeholder="Email@ibge.gov.br">
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputTelefoneCoord">Telefone privado/VOIP</label>
-                          <input type="number" class="form-control" id="inputTelefoneCoord"
-                            placeholder="83998341257">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputAreaCoord">Área do Coordenador</label>
-                          <input type="text" class="form-control" id="inputAreaCoord"
-                            placeholder="Área">
-                        </div>
-                      </div>
                     
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                     <a href="buscaArea.html"> <button type="submit" class="btn btn-primary" >Buscar</button></a>
                  
                   </div>
                  </div>
@@ -125,29 +105,60 @@
                 
         
                
-                  <div class="tab-pane fade" id="nav-area" role="tabpanel" aria-labelledby="nav-area-tab">
+                  <div class="tab-pane fade" id="nav-buscaSub" role="tabpanel" aria-labelledby="nav-buscaSub-tab">
 
                     <div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputNomeArea">Nome da Área</label>
-                          <input type="text" class="form-control" id="inputNomeArea" placeholder="Área">
-                        </div>
+                        <div class="form-group">
+                            <label for="inputNomeBuscaSubarea">Nome da Subarea</label>
+                            <input type="text" class="form-control" id="inputNomeBuscaSubarea" placeholder="Ex: João Pessoa">
+                          </div>
                       
-                        <div class="form-group col-md-6">
-                          <label for="inputEndereco">Endereço</label>
-                          <input type="text" class="form-control" id="inputEndereco" placeholder="Rua ...">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputTelefoneArea">Telefone da agência</label>
-                        <input type="number" class="form-control" id="inputTelefoneArea" placeholder="32219586">
-                      </div>
-                    
-                    </div>
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                     <a href="buscaSubarea.html">  <button type="submit" class="btn btn-primary">Buscar</button></a> 
                     </div>
                   </div>
+
+                    <div class="tab-pane fade" id="nav-buscaPosto" role="tabpanel" aria-labelledby="nav-buscaPosto-tab">
+
+                      <div>
+                        <div class="form-group">
+                            <label for="inputNomeBuscaPosto">Nome do Posto de Coleta</label>
+                            <input type="text" class="form-control" id="inputNomeBuscaPosto" placeholder="Ex: João Pessoa">
+                          </div>
+                      
+                       <a href="buscaPosto.html"> <button type="submit" class="btn btn-primary">Buscar</button></a>
+                      
+                      </div>
+                     
+
+
+
+
+
+                  </div>
+
+                  <div class="tab-pane fade" id="nav-buscaEquipamentos" role="tabpanel" aria-labelledby="nav-buscaEquipamentos-tab">
+
+                    <div>
+                        <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="inputNomeEquipamentoBusca">Nome do Equipamento</label>
+                          <input type="text" class="form-control" id="inputNomeEquipamentoBusca" placeholder="Ex: Celular/Notebook">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPatrimonioEquipamentoBusca">Patrimônio do Equipamento</label>
+                            <input type="text" class="form-control" id="inputPatrimonioEquipamentoBusca" placeholder="Ex: 590845">
+                          </div>
+                    </div>
+                     <a href="controleEqp.html"> <button type="submit" class="btn btn-primary">Buscar</button></a>
+                    
+                    </div>
+                   
+
+
+
+
+
+                </div>
               
         </div>
               
