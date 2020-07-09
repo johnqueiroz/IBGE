@@ -20,7 +20,7 @@
 
                     
 
-            <a class="navbar-brand" href="cadastroareas.html" style="color: aliceblue;" >Sistemas de arquivo IBGE</a>
+            <a class="navbar-brand" href="buscas.html" style="color: aliceblue;" >Sistema de Controle de Equipamento</a>
 
             <div class= "collapse navbar-collapse" id="navbarSite">
               <ul class="navbar-nav ml-auto">
@@ -29,11 +29,11 @@
                   
                    
                 <li class="nav-item">
-                  <a class="nav-link" href="buscas.html" style="color: aliceblue;">Buscas</a>
+                  <a class="nav-link" href="buscas.html" style="color: aliceblue;">Busca</a>
               </li>
                   <div class="dropdown">
                               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contatos
+                                Contato
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">(83)9 998341257</button>
@@ -43,14 +43,29 @@
                               
                             </div>
                             <div class="dropdown">
+                              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Gerenciamento
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <a href="#">    <button class="dropdown-item" type="button">Gerenciamento dos equipamentos</button></a>
+                 
+                              <a href="#">  <button class="dropdown-item" type="button">Gerenciamento Áreas/ Coordenadores</button></a>
+                              <a href="#">    <button class="dropdown-item" type="button" >Gerenciamento Subareas/ Supervisores</button></a>
+                              <a href="#">    <button class="dropdown-item" type="button">Gerenciamento Posto de Coleta/ ACM/ ACS</button></a>
+                              
+                              </div>
+                              </div>
+                            <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Cadastros
+                              Cadastro
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                            <a href="cadastroareas.html">  <button class="dropdown-item" type="button">Cadastro Áreas</button></a>
-                            <a href="cadastroSubarea.html">    <button class="dropdown-item" type="button" >Cadastro Subareas</button></a>
-                            <a href="cadastroPostodeColeta.html">    <button class="dropdown-item" type="button">Cadastro Posto de Coleta</button></a>
-                            <a href="cadastroEquipamentos.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos</button></a>
+                              <a href="cadastroEquipamentos.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos</button></a>
+                              <a href="cadastroPorArea.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos por local</button></a>
+                            <a href="cadastroareas.html">  <button class="dropdown-item" type="button">Cadastro Áreas/ Coordenadores</button></a>
+                            <a href="cadastroSubarea.html">    <button class="dropdown-item" type="button" >Cadastro Subareas/ Supervisores</button></a>
+                            <a href="cadastroPostodeColeta.html">    <button class="dropdown-item" type="button">Cadastro Posto de Coleta/ ACM/ ACS</button></a>
+                            
                             </div>
                             </div>
                           <li class="nav-item">
@@ -88,34 +103,45 @@
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-patrimonio" role="tabpanel" aria-labelledby="nav-patrimonio-tab">
                     <div>
+
+                      <form id="formCard" name="form_equipamentos_com_patrimonio" action="Cadastro_Equipamento.php" method="POST">
+
                       <div class="form-row">
+
                         <div class="form-group col-md-6">
                           <label for="inputEspecificacoes">Especificações</label>
-                          <input type="text" class="form-control" id="inputEspecificacoes" placeholder="Ex: Modelo/marca">
+                          <input name="Especificacoes_com_patrimonio" type="text" class="form-control" id="inputEspecificacoes" placeholder="Ex: Modelo/marca">
                         </div>
+
                         <div class="form-group col-md-6">
                           <label for="inputPatrimonio">patrimônio</label>
-                          <input type="number" class="form-control" id="inputPatrimonio" placeholder="Ex: 590586">
+                          <input name="Patrimonio_equipamento" type="number" class="form-control" id="inputPatrimonio" placeholder="Ex: 590586">
                         </div>
+
                       </div>
+
                       <div class="form-group">
                         <label for="inputSerieEqp">Série</label>
-                        <input type="text" class="form-control" id="inputSerieEqp" placeholder="Ex: 4A426ASD">
+                        <input name="Serial_equipamento" type="text" class="form-control" id="inputSerieEqp" placeholder="Ex: 4A426ASD">
                       </div>
+
                       <div class="form-row">
+
                         <div class="form-group col-md-6">
                           <label for="inputDataRecebimento">Data do Recebimento</label>
-                          <input type="date" class="form-control" id="inputDataRecebimento">
+                          <input name="Data_recebimento_com_patrimonio" type="date" class="form-control" id="inputDataRecebimento">
                         </div>
+
                         <div class="form-group col-md-6">
                           <label for="inputQuantidade">Quantidade de Equipamentos Recebidos</label>
-                          <input type="number" class="form-control" id="inputQuantidade"
+                          <input name="Quantidade_equipamento_com_patrimonio" type="number" class="form-control" id="inputQuantidade"
                             >
                         </div>
+
                       </div>
                     
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
-                 
+                      <input type="submit" class="btn btn-primary">
+                    </form>
                   </div>
                  </div>
 
@@ -125,24 +151,37 @@
                   <div class="tab-pane fade" id="nav-sempatrimonio" role="tabpanel" aria-labelledby="nav-sempatrimonio-tab">
 
                     <div>
+
+                      <form id="formCard" name="form_equipamentos_sem_patrimonio" action="Cadastro_Equipamento_sem_patrimonio.php" method="POST">
+
                       <div class="form-row">
+
                         <div class="form-group col-md-6">
                           <label for="inputEspecificacoesSemPatrimonio">Especificações</label>
-                          <input type="text" class="form-control" id="inputEspecificacoesSemPatrimonio" placeholder="Ex: Marca/Modelo">
+                          <input name="Especificacoes_sem_patrimonio" type="text" class="form-control" id="inputEspecificacoesSemPatrimonio" placeholder="Ex: Marca/Modelo">
                         </div>
                       
                         <div class="form-group col-md-6">
                           <label for="inputDataRecebimentoSemPatrimonio">Data do Recebimento</label>
-                          <input type="date" class="form-control" id="inputDataRecebimentoSemPatrimonio" >
+                          <input name="Data_recebimento_sem_patrimonio" type="date" class="form-control" id="inputDataRecebimentoSemPatrimonio" >
                         </div>
+
                       </div>
+
                       <div class="form-group">
+
                         <label for="inputQuantidadeSemPatrimonio">Quantidade de Equipamentos</label>
-                        <input type="number" class="form-control" id="inputQuantidadeSemPatrimonio">
+                        <input name="Quantidade_equipamento_sem_patrimonio" type="number" class="form-control" id="inputQuantidadeSemPatrimonio">
                       </div>
-                    
+
+                      <input type="submit" class="btn btn-primary">
+
+                      </form>
+
                     </div>
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+
+                      
+
                     </div>
                   </div>
               

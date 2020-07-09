@@ -19,19 +19,20 @@
 
                     
 
-            <a class="navbar-brand" href="cadastroareas.html" style="color: aliceblue;" >Sistemas de arquivo IBGE</a>
+            <a class="navbar-brand" href="buscas.html" style="color: aliceblue;" >Sistema de Controle de Equipamento</a>
 
             <div class= "collapse navbar-collapse" id="navbarSite">
               <ul class="navbar-nav ml-auto">
       
 
                   
+                   
                 <li class="nav-item">
-                  <a class="nav-link" href="buscas.html" style="color: aliceblue;">Buscas</a>
+                  <a class="nav-link" href="buscas.html" style="color: aliceblue;">Busca</a>
               </li>
                   <div class="dropdown">
                               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contatos
+                                Contato
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">(83)9 998341257</button>
@@ -41,14 +42,29 @@
                               
                             </div>
                             <div class="dropdown">
+                              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Gerenciamento
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <a href="#">    <button class="dropdown-item" type="button">Gerenciamento dos equipamentos</button></a>
+                  
+                              <a href="#">  <button class="dropdown-item" type="button">Gerenciamento Áreas/ Coordenadores</button></a>
+                              <a href="#">    <button class="dropdown-item" type="button" >Gerenciamento Subareas/ Supervisores</button></a>
+                              <a href="#">    <button class="dropdown-item" type="button">Gerenciamento Posto de Coleta/ ACM/ ACS</button></a>
+                              
+                              </div>
+                              </div>
+                            <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Cadastros
+                              Cadastro
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                            <a href="cadastroareas.html">  <button class="dropdown-item" type="button">Cadastro Áreas</button></a>
-                            <a href="cadastroSubarea.html">    <button class="dropdown-item" type="button" >Cadastro Subareas</button></a>
-                            <a href="cadastroPostodeColeta.html">    <button class="dropdown-item" type="button">Cadastro Posto de Coleta</button></a>
-                            <a href="cadastroEquipamentos.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos</button></a>
+                              <a href="cadastroEquipamentos.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos</button></a>
+                              <a href="cadastroPorArea.html">    <button class="dropdown-item" type="button">Cadastro dos equipamentos por local</button></a>
+                            <a href="cadastroareas.html">  <button class="dropdown-item" type="button">Cadastro Áreas/ Coordenadores</button></a>
+                            <a href="cadastroSubarea.html">    <button class="dropdown-item" type="button" >Cadastro Subareas/ Supervisores</button></a>
+                            <a href="cadastroPostodeColeta.html">    <button class="dropdown-item" type="button">Cadastro Posto de Coleta/ ACM/ ACS</button></a>
+                            
                             </div>
                             </div>
                           <li class="nav-item">
@@ -90,35 +106,38 @@
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-coord" role="tabpanel" aria-labelledby="nav-coord-tab">
                     <div>
+
+                      <form id="formCad" name="form_cadastro_coordArea" action="Cadastro_coord_area.php" method="POST">
+
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputNomeCoordArea">Nome</label>
-                          <input type="text" class="form-control" id="inputNomeCoordArea" placeholder="Ex: John Emerson Ferreira R Filho">
+                          <input name="Nome_coord_area" type="text" class="form-control" id="inputNomeCoordArea" placeholder="Ex: John Emerson Ferreira R Filho">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputSiapeCoord">Número do Siape</label>
-                          <input type="number" class="form-control" id="inputSiapeCoord" placeholder="3080572">
+                          <input name="Siape_coord_area" type="number" class="form-control" id="inputSiapeCoord" placeholder="3080572">
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputEmailCoord">E-mail</label>
-                        <input type="text" class="form-control" id="inputEmailCoord" placeholder="Email@ibge.gov.br">
+                        <input name="Email_coord_area" type="text" class="form-control" id="inputEmailCoord" placeholder="Email@ibge.gov.br">
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputTelefoneCoord">Telefone privado/VOIP</label>
-                          <input type="number" class="form-control" id="inputTelefoneCoord"
+                          <input name="Telefone_coord_area" type="text" class="form-control" id="inputTelefoneCoord"
                             placeholder="83998341257">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputAreaCoord">Área do Coordenador</label>
-                          <input type="text" class="form-control" id="inputAreaCoord"
+                          <input name="Area_coord" type="text" class="form-control" id="inputAreaCoord"
                             placeholder="Área">
                         </div>
                       </div>
                     
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
-                 
+                      <input type="submit" class="btn btn-primary">
+                      </form>
                   </div>
                  </div>
 
@@ -128,24 +147,26 @@
                   <div class="tab-pane fade" id="nav-area" role="tabpanel" aria-labelledby="nav-area-tab">
 
                     <div>
+                      <form id="formCad" name="form_cadastro_area" action="Cadastro_area.php" method="POST">
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputNomeArea">Nome da Área</label>
-                          <input type="text" class="form-control" id="inputNomeArea" placeholder="Área">
+                          <input name="Nome_area" type="text" class="form-control" id="inputNomeArea" placeholder="Área">
                         </div>
                       
                         <div class="form-group col-md-6">
                           <label for="inputEndereco">Endereço</label>
-                          <input type="text" class="form-control" id="inputEndereco" placeholder="Rua ...">
+                          <input name="Endereco_area" type="text" class="form-control" id="inputEndereco" placeholder="Rua ...">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputTelefoneArea">Telefone da agência</label>
-                        <input type="number" class="form-control" id="inputTelefoneArea" placeholder="32219586">
+                        <label for="inputTelefoneArea">Telefone</label>
+                        <input name="Telefone_area" type="text" class="form-control" id="inputTelefoneArea" placeholder="32219586">
                       </div>
-                    
+                      <input type="submit" class="btn btn-primary">
+                      </form>
                     </div>
-                      <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                      
                     </div>
                   </div>
               
