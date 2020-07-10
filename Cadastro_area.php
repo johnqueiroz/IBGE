@@ -1,15 +1,15 @@
 <?php
 
-$conexao = mysqli_connect('localhost', 'root', '', 'projeto2');
+$conexao = mysqli_connect('localhost', 'root', '', 'projeto_ibge');
 
 
-$nomeDaArea = $_POST["nome_area"];
-$endereco = $_POST["endereco_area"];
-$telefone = $_POST["telefone_area"];
+$nomeDaArea = $_POST["Nome_area"];
+$endereco = $_POST["Endereco_area"];
+$telefone = $_POST["Telefone_area"];
 
 
 
-$sql = "INSERT INTO area
+$sql = "INSERT INTO area (nome_area, endereco_area, telefone_area)";
 
 if ($conexao->query($sql) === TRUE) {
     echo "New record created successfully";

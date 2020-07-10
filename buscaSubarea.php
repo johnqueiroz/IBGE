@@ -46,7 +46,7 @@
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
                                 <a href="#">    <button class="dropdown-item" type="button">Gerenciamento dos equipamentos</button></a>
-                         
+                              
                               <a href="#">  <button class="dropdown-item" type="button">Gerenciamento Áreas/ Coordenadores</button></a>
                               <a href="#">    <button class="dropdown-item" type="button" >Gerenciamento Subareas/ Supervisores</button></a>
                               <a href="#">    <button class="dropdown-item" type="button">Gerenciamento Posto de Coleta/ ACM/ ACS</button></a>
@@ -81,37 +81,47 @@
       </nav>
               <br>
                 <div id="cadastro">
-                        Buscas Áreas
+                        Buscas Subareas
 
                 </div>
        <br>
        <br>
         <div>
+          <?php
+          $conexao = mysqli_connect("localhost", "root", "", "projeto_ibge");
+          $sql = $conexao -> query("SELECT subarea.nome_subarea, subarea.endreco_subarea, subarea.areaPertencente, coord_subarea.nome_CoordSubarea, coord_subarea.telefone_CoordSubarea FROM subarea INNER JOIN coord_subarea ON subarea.nome_subarea = coord_subarea.Subarea_coord ");
+
+          echo(' <table class="table table-hover" id="formCad">
+            
+            <thead>
+              <tr>
+                  <th scope="col">Nome da Subarea</th>
+                  <th scope="col">Endereço</th>
+                  <th scope="col">Área pertencente</th>
+                  <th scope="col">Coordenador da Subrea</th>
+                  <th scope="col">Telefone do coordenador</th>
                   
-            <table class="table">
-              <thead>
-                  <tr>
-                      <th scope="col">Nome da Área</th>
-                      <th scope="col">Endereço</th>
-                      <th scope="col">Telefone</th>
-                      <th scope="col">Coordenador da área</th>
-                      <th scope="col">Telefone do Coordenador</th>
-                      
-                  </tr>
-              </thead>
-  
-              <tbody>
-                  <tr>
-                      <td>Coisinha</td>
-                      <td>Rua lá de casa</td>
-                      <td>678 ta na hora de comer biscoito</td>
-                      <td>Jujubinha</td>
-                      <td>222222222</td>
-                  </tr>
-  
-                 
-              </tbody>
-          </table>
+              </tr>
+          </thead>');
+          
+          while($tabela = mysqli_fetch_array($sql)){
+            echo('
+            <tr>
+              <td>'.$tabela['nome_subarea'].'</td>
+              <td>'.$tabela['endereco_subarea'].'</td>
+              <td>'.$tabela['areaPertencente'].'</td>
+              <td>'.$tabela['nome_CoordSubarea'].'</td>
+              <td>'.$tabela['telefone_CoordSubarea'].'</td>
+              
+              </tr>
+            
+            ');
+
+          }
+
+        
+          ?>   
+            
       </div>
     </div>
 

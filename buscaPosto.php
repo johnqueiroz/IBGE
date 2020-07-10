@@ -88,32 +88,40 @@
        <br>
         <div>
                   
-            <table class="table">
-              <thead>
-                  <tr>
-                      <th scope="col">Nome do Posto de Coleta</th>
-                      <th scope="col">Endereço</th>
-                      <th scope="col">Subarea pertencente</th>
-                      <th scope="col">Coordenador do Posto de Coleta</th>
-                      <th scope="col">Telefone do Coordenador</th>
-                      <th scope="col">Nome do/dos ACS</th>
-                      
-                  </tr>
-              </thead>
-  
-              <tbody>
-                  <tr>
-                      <td>Coisinha</td>
-                      <td>Rua lá de casa</td>
-                      <td>678 ta na hora de comer biscoito</td>
-                      <td>Jujubinha</td>
-                      <td>222222222</td>
-                      <td>Bichinho</td>
-                  </tr>
-  
-                 
-              </tbody>
-          </table>
+          <?php
+          $conexao = mysqli_connect("localhost", "root", "", "projeto_ibge");
+          $sql = $conexao -> query("SELECT posto.nome_posto, posto.endreco_posto, posto.subareaPertencente, acm_posto.nome_acm, acm_posto.telefone_acm, acs_posto.nome_acs FROM posto INNER JOIN acm_posto ON posto.nome_posto = acm_posto.acm_nome ");
+
+          echo(' <table class="table table-hover" id="formCad">
+            
+            <thead>
+              <tr>
+                  <th scope="col">Nome do Posto de Coleta</th>
+                  <th scope="col">Endereço</th>
+                  <th scope="col">Subarea pertencente</th>
+                  <th scope="col">Coordenador do Posto de Coleta</th>
+                  <th scope="col">Telefone do coordenador</th>
+                  
+              </tr>
+          </thead>');
+          
+          while($tabela = mysqli_fetch_array($sql)){
+            echo('
+            <tr>
+              <td>'.$tabela['nome_posto'].'</td>
+              <td>'.$tabela['endereco_posto'].'</td>
+              <td>'.$tabela['subareaPertencente'].'</td>
+              <td>'.$tabela['nome_acm'].'</td>
+              <td>'.$tabela['telefone_acm'].'</td>
+              
+              </tr>
+            
+            ');
+
+          }
+
+        
+          ?>
       </div>
     </div>
 

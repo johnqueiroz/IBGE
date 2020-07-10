@@ -1,6 +1,6 @@
 <?php
 
-$conexao = mysqli_connect('localhost', 'root', '', '');
+$conexao = mysqli_connect('localhost', 'root', '', 'projeto_ibge');
 
 
 $especificacoes = $_POST["especificacoes"];
@@ -12,7 +12,7 @@ $qtd_equipamentos_recebidos = $_POST["quantidade_recebidos"];
 
 
 
-$sql = "INSERT INTO eqp_compatrimonio 
+$sql = "INSERT INTO eqp_compatrimonio" 
 
 if ($conexao->query($sql) === TRUE) {
     echo "New record created successfully";

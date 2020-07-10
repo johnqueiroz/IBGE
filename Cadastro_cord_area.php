@@ -1,17 +1,17 @@
 <?php
 
-$conexao = mysqli_connect('localhost', 'root', '', '');
+$conexao = mysqli_connect('localhost', 'root', '', 'projeto_ibge');
 
 
-$nome = $_POST["nome_CordArea"];
-$numeroSiape = $_POST["siape_area"];
-$email = $_POST["email_CordArea"];
-$telefone = $_POST["telefone_CordArea"];
-$areaDoCordenador = $_POST["area_Cord"];
+$nome = $_POST["Nome_cord_area"];
+$numeroSiape = $_POST["Siape_coord_area"];
+$email = $_POST["Email_coord_area"];
+$telefone = $_POST["Telefone_coord_area"];
+$areaDoCordenador = $_POST["Area_Coord"];
 
 
 
-$sql = "INSERT INTO cord_area;
+$sql = "INSERT INTO coord_area (nome_CoordArea,	email_CoordArea, telefone_CoordArea, siape_area, area_Coord)";
 
 if ($conexao->query($sql) === TRUE) {
     echo "New record created successfully";

@@ -92,32 +92,41 @@
        <br>
         <div>
                   
-            <table class="table">
-              <thead>
-                  <tr>
-                      <th scope="col">Patrimonio</th>
-                      <th scope="col">Quantidade</th>
-                      <th scope="col">Area</th>
-                      <th scope="col">Estado do Equipamento</th>
-                  </tr>
-              </thead>
-  
-              <tbody>
-                  <tr>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                  </tr>
-  
-                  <tr>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                      <td>dsadsada</td>
-                  </tr>
-              </tbody>
-          </table>
+
+
+        <?php
+          $conexao = mysqli_connect("localhost", "root", "", "projeto_ibge");
+          $sql = $conexao -> query("SELECT eqp_compatrimonio.patrimonio, eqp_compatrimonio.quantidade_recebidos, eqp_por_area.eqp_area, eqp_por_area.eqp_estado  FROM eqp_compatrimonio INNER JOIN eqp_por_area ON eqp_compatrimonio.patrimonio = eqp_por_area.patrimonio_eqp_area");
+
+          echo(' <table class="table table-hover" id="formCad">
+            
+            <thead>
+              <tr>
+                  <th scope="col">Patrimonio</th>
+                  <th scope="col">Quantidade</th>
+                  <th scope="col">Area</th>
+                  <th scope="col">Estado do Equipamento</th>
+              </tr>
+          </thead>');
+          
+          while($tabela = mysqli_fetch_array($sql)){
+            echo('
+            <tr>
+              <td>'.$tabela['patrimonio'].'</td>
+              <td>'.$tabela['quantidade_recebidos'].'</td>
+              <td>'.$tabela['eqp_area'].'</td>
+              <td>'.$tabela['eqp_estado'].'</td>
+              
+              </tr>
+            
+            ');
+
+          }
+
+        
+          ?>
+
+            
       </div>
     </div>
 

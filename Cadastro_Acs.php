@@ -1,16 +1,16 @@
 <?php
 
-$conexao = mysqli_connect('localhost', 'root', '', '');
+$conexao = mysqli_connect('localhost', 'root', '', 'projeto_ibge');
 
 
-$nome = $_POST["nome_acs"];
-$email = $_POST["email_acs"];
-$telefone = $_POST["telefone_acs"];
-$postoDoAcs = $_POST["posto_acs"];
-$id = $_POST["id_acs"]"
+$nome = $_POST["Nome_acs"];
+$email = $_POST["Email_acs"];
+$telefone = $_POST["Telefone_acs"];
+$postoDoAcs = $_POST["Posto_acs"];
 
 
-$sql = "INSERT INTO acs_posto;
+
+$sql = "INSERT INTO acs_posto (nome_acs, email_acs, telefone_acs, posto_acs)";
 
 if ($conexao->query($sql) === TRUE) {
     echo "New record created successfully";

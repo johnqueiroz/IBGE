@@ -1,6 +1,6 @@
 <?php
 
-$conexao = mysqli_connect('localhost', 'root', '', '');
+$conexao = mysqli_connect('localhost', 'root', '', 'projeto_ibge');
 
 
 $especificacoes = $_POST["especificacoes"];
